@@ -55,20 +55,26 @@
             padding: 80px 0; 
             text-align: center; 
         }
-        .card-container { 
+        .card-container, .reviews-container { 
             display: flex; 
             justify-content: space-around;
             flex-wrap: wrap;
         }
-        .card { 
+        .card, .review { 
             width: 30%; 
             padding: 20px; 
             border-radius: 10px; 
             background: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: 0.3s;
+            text-align: center;
         }
-        .card:hover { transform: translateY(-5px); }
+        .card:hover, .review:hover { transform: translateY(-5px); }
+        .review-author {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: right;
+        }
         .contact-form { 
             max-width: 400px; 
             margin: auto; 
@@ -94,27 +100,13 @@
             transition: 0.3s;
         }
         .contact-form button:hover { background: #21867a; }
-        .reviews-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        .review {
-            width: 30%;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            font-style: italic;
-            transition: 0.3s;
-        }
-        .review:hover { transform: translateY(-5px); }
-        .review-author {
-            font-weight: bold;
-            margin-top: 10px;
-            text-align: right;
+
+        @media (max-width: 768px) {
+            .container { width: 95%; }
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 10px; }
+            nav a { display: block; margin: 5px 0; }
+            .card, .review { width: 100%; margin-bottom: 20px; }
         }
     </style>
 </head>
