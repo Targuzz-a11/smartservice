@@ -96,20 +96,21 @@
         .contact-form button:hover { background: #21867a; }
         .reviews-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
+            justify-content: space-around;
+            flex-wrap: wrap;
             margin-top: 30px;
         }
         .review {
-            max-width: 600px;
-            padding: 15px;
+            width: 30%;
+            padding: 20px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: left;
+            text-align: center;
             font-style: italic;
+            transition: 0.3s;
         }
+        .review:hover { transform: translateY(-5px); }
         .review-author {
             font-weight: bold;
             margin-top: 10px;
