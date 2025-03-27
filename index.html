@@ -94,6 +94,27 @@
             transition: 0.3s;
         }
         .contact-form button:hover { background: #21867a; }
+        .reviews-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .review {
+            max-width: 600px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+            font-style: italic;
+        }
+        .review-author {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -146,9 +167,11 @@
         
         <section id="reviews" class="reviews">
             <h2>Отзывы</h2>
-            <p>"Решили все наши IT-проблемы за пару дней!" – Иван К.</p>
-            <p>"Отличный сервис, всегда на связи и помогает!" – Мария Л.</p>
-            <p>"Автоматизировали нашу CRM, теперь все работает четко!" – Сергей П.</p>
+            <div class="reviews-container">
+                <div class="review">"Решили все наши IT-проблемы за пару дней!" <div class="review-author">– Иван К.</div></div>
+                <div class="review">"Отличный сервис, всегда на связи и помогает!" <div class="review-author">– Мария Л.</div></div>
+                <div class="review">"Автоматизировали нашу CRM, теперь все работает четко!" <div class="review-author">– Сергей П.</div></div>
+            </div>
         </section>
     </div>
 </body>
